@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Double Pendulum</title>
+    <meta name="description" content="3D Double Pendulum Simulation">
+    <meta name="author" content="Dmitriy Golovko">
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@latest/lib/browser/math.js" defer></script>
+    <script src="DoublePendulum/app.js" defer></script>
+    <script src="DoublePendulum/graphics.js" defer></script>
+    <link rel="stylesheet" href="DoublePendulum/style.css">
+    <link rel="stylesheet" href="DoublePendulum/slider.css">
+</head>
+<body>
+    <div class="main-container">
+        <canvas class="graphics-canvas" width="1920" height="1080"></canvas>
+        <div class="buttons-sliders-container">
+            <div class="buttons-container">
+                <div class="reset-button button" onclick="reset()">
+                    <img src="DoublePendulum/reset1.png" alt="reset" width="30" height="30">
+                </div>
+            </div>
+            <div class="sliders-container">
+                <label for="l1-slider">l1</label>
+                <input type="range" min="1" max="100" value="50" class="slider" id="l1-slider" oninput="updateSliderValue('l1', this.value)">
+                <label for="l2-slider">l2</label>
+                <input type="range" min="1" max="100" value="50" class="slider" id="l2-slider" oninput="updateSliderValue('l2', this.value)">
+                <label for="m1-slider">m1</label>
+                <input type="range" min="1" max="100" value="50" class="slider" id="m1-slider" oninput="updateSliderValue('m1', this.value)">
+                <label for="m2-slider">m2</label>
+                <input type="range" min="1" max="100" value="50" class="slider" id="m2-slider" oninput="updateSliderValue('m2', this.value)">
+            </div>
+        </div>
+        <div class="boxes-container">
+            <label for="phi1i-textbox">φ<sub>1i</sub>=</label>
+            <input type="text" name="value" id="phi1i-textbox" value="1">
+            <label for="phi2i-textbox">φ<sub>2i</sub>=</label>
+            <input type="text" name="value" id="phi2i-textbox" value="0">
+            <label for="dphi1i-textbox">φ'<sub>1i</sub>=</label>
+            <input type="text" name="value" id="dphi1i-textbox" value="0">
+            <label for="dphi2i-textbox">φ'<sub>2i</sub>=</label>
+            <input type="text" name="value" id="dphi2i-textbox" value="0">
+
+            <label for="theta1i-textbox">θ<sub>1i</sub>=</label>
+            <input type="text" name="value" id="theta1i-textbox" value="0">
+            <label for="theta2i-textbox">θ<sub>2i</sub>=</label>
+            <input type="text" name="value" id="theta2i-textbox" value="1">
+            <label for="dtheta1i-textbox">θ'<sub>1i</sub>=</label>
+            <input type="text" name="value" id="dtheta1i-textbox" value="0">
+            <label for="dtheta2i-textbox">θ'<sub>2i</sub>=</label>
+            <input type="text" name="value" id="dtheta2i-textbox" value="0">
+
+            <div class="textbox-error-message"></div>
+        </div>
+    </div>
+</body>
+</html>

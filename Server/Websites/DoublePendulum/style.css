@@ -1,0 +1,59 @@
+* {
+    user-select: none;
+    color: white;
+}
+
+input {
+    color: black;
+}
+
+body {
+    background-color: black;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+canvas, .sliders-container, .boxes-container {
+    margin: 10px;
+    padding: 10px;
+    border: 3px;
+    border-color: white;
+    border-style: double;
+    border-radius: 5px
+}
+
+.buttons-container {
+    display: flex;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px;
+    width: 60px;
+    height: 40px;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: lightgray;
+}
+
+.sliders-container {
+    padding: 5px;
+}
+
+.textbox-error-message {
+    color: red;
+}
+
+input[type="text"] {
+    width: 30px;
+}

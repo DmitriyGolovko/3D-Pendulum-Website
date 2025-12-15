@@ -1,0 +1,70 @@
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 10px;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Track styles for Chrome, Safari, Opera */
+.slider::-webkit-slider-runnable-track {
+  height: 6px;
+  background: #fff;
+  border-radius: 3px;
+}
+
+/* Thumb styles for Chrome, Safari, Opera */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #0074d9; /* Blue color */
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 2px #0074d9;
+  margin-top: -9px; /* Adjusts thumb position */
+}
+
+/* Track styles for Firefox */
+.slider::-moz-range-track {
+  height: 6px;
+  background: #fff;
+  border-radius: 3px;
+}
+
+/* Thumb styles for Firefox */
+.slider::-moz-range-thumb {
+  background: #0074d9;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  box-shadow: 0 0 2px #0074d9;
+}
+
+/* Track styles for IE and Edge */
+.slider::-ms-fill-lower,
+.slider::-ms-fill-upper {
+  background: #fff;
+  border-radius: 3px;
+}
+.slider::-ms-thumb {
+  background: #0074d9;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  box-shadow: 0 0 2px #0074d9;
+}
+
+/* Waterfall fixes for different browsers */
+.slider:focus {
+  outline: none;
+}
+.slider::-ms-tooltip {
+  display: none;
+}
